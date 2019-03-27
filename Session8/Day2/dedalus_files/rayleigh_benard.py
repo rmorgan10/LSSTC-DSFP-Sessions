@@ -21,7 +21,7 @@ The simulation should take a few process-minutes to run.
 import numpy as np
 from mpi4py import MPI
 import time
-
+from dedalus.tools import post
 from dedalus import public as de
 from dedalus.extras import flow_tools
 
