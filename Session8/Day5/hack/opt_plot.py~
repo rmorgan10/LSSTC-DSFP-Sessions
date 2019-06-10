@@ -1,0 +1,44 @@
+# Make a pretty plot of optimize.py results
+
+import pandas as pd
+import matplotlib.pyplot as plt
+import plotting
+import numpy as np
+
+b = pd.read_csv('baseline.csv')
+l = pd.read_csv('listcomp.csv')
+v = pd.read_csv('vectorized.csv')
+n = pd.read_csv('numbaized.csv')
+
+
+#get speed up factors
+b_speedup = 1.0
+l_speedup = np.max(b['avg']) / np.max(l['avg'])
+v_speedup = np.max(b['avg']) / np.max(v['avg'])
+n_speedup = np.max(b['avg']) / np.max(n['avg'])
+
+fig = plt.figure()
+plt.fill_between(b['size'], b['avg'] + 0.5 * b['std'], b['avg'] - 0.5 * b['std'], 
+                 label=None, color='blue', alpha=0.2)
+plt.plot(b['size'], b['avg'], lw=2, color='darkblue', label='Baseline (%.2f)'%b_speedup)
+
+plt.fill_between(l['size'], l['avg'] + 0.5 * l['std'], l['avg'] - 0.5 * l['std'],
+                 label=None, color='green', alpha=0.2)
+plt.plot(l['size'], l['avg'], lw=2, color='darkgreen', label='List Comp. (%.2f)'%l_speedup)
+
+plt.fill_between(v['size'], v['avg'] + 0.5 * v['std'], v['avg'] - 0.5 * v['std'],
+                 label=None, color='orange', alpha=0.2)
+plt.plot(v['size'], v['avg'], lw=2, color='darkorange', label='Vectorized (%.2f)'%v_speedup)
+
+plt.fill_between(n['size'], n['avg'] + 0.5 * n['std'], n['avg'] - 0.5 * n['std'],
+                 label=None, color='violet', alpha=0.2)
+plt.plot(n['size'], n['avg'], lw=2, color='darkviolet', label='Numba (%.2f)'%n_speedup)
+
+plt.xlabel("Dataset Size (Number of Light Curves)", fontsize=16)
+plt.ylabel("Wall-Clock Time (Seconds)", fontsize=16)
+plt.legend(loc='upper left')
+plt.title("Optimizing a Function for Reading Text\nFiles and Initializing Python Objects")
+fig.tight_layout()
+plt.savefig('Rob_plot.png') 
+plt.show(block=True)
+

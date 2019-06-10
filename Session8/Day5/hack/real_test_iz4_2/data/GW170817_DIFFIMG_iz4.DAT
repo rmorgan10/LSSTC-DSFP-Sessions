@@ -1,0 +1,63 @@
+# Sep 23 2017: copied from 
+# /data/des41.a/data/marcelle/GW170817/502/postproc/LightCurvesReal/des_real_00299275.dat
+#
+SURVEY:    DES 
+SNID:      DIFFIMG   # aka 299275
+SNTYPE:      0     #  
+FILTERS:   ugrizY 
+PIXSIZE:   0.27    # arcsec 
+NXPIX:     2048  
+NYPIX:     4096  
+FAKE:      0 
+RA:        197.450374  deg
+DECL:      -23.381494  deg
+MWEBV:     0  # WARNING: see OPT_MWEBV in SNANA manual 
+MWEBV_ERR: 0  
+REDSHIFT_HELIO:  -9.0000  +-  -9.0000   
+REDSHIFT_FINAL:  0.0095  +-  0.0001    # CMB
+
+HOSTGAL_OBJID:   -888 
+HOSTGAL_PHOTOZ:  -9.0000 +-  -9.0000
+HOSTGAL_SPECZ:   -9.0000 +-  -9.0000
+HOSTGAL_SNSEP:   -9.00    # arcsec
+#HOSTGAL_MAG:     8.0 888.00 888.00 888.00 888.00    # Aper_4 
+#HOSTGAL_SB_FLUXCAL: -888.00 -888.00 -888.00 -888.00    # griz FLUXCAL/asec^2 
+
+PRIVATE(DES_snid):            299275 
+PRIVATE(DES_cand_type):         0   (OK                  )
+PRIVATE(DES_transient_status):  0  
+PRIVATE(DES_ccdnum):            36  # first CCDNUM in query 
+PRIVATE(DES_numepochs):         0  # read from SNCAND 
+PRIVATE(DES_numepochs_ml):      0  # read from SNCAND 
+PRIVATE(DES_numepochs_ml_Y0):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y1):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y2):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y3):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y4):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y5):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y6):      0  # computed 
+PRIVATE(DES_mjd_trigger):       0.000 # computed
+PRIVATE(DES_mjd_latest_ml):     0.000 # computed 
+PRIVATE(DES_latest_nite_ml):    0   # read from SNCAND
+PRIVATE(DES_nobs_offccd):       0  # computed 
+PRIVATE(DES_nobs_photerr):      0  # (Nobs with PHOTLAG & 1016) 
+PRIVATE(DES_hostgal_dlr):       -9.00   
+PRIVATE(DES_hostgal_gradient_g):  -888.00 
+PRIVATE(DES_hostgal_gradient_r):  -888.00 
+PRIVATE(DES_hostgal_gradient_i):  -888.00 
+PRIVATE(DES_hostgal_gradient_z):  -888.00 
+
+
+# ------------------ 
+NOBS: 49 
+NVAR: 18 
+VARLIST: MJD  FLT  FIELD FLUXCAL  FLUXCALERR PHOTFLAG PHOTPROB ZPFLUX PSF SKYSIG SKYSIG_T GAIN XPIX YPIX  NITE EXPNUM CCDNUM OBJID  
+
+# Begin Y502 obs 
+
+OBS:   57983.003  i  -1   1.0323e+04   5.1424e+01  12800   0.960  30.368 2.616 55.5 14.4 1.02 550.51 1791.56  20170817  668439   36   10331171  
+OBS:   57983.004  z  -1   9.4199e+03   6.7293e+01  12800   0.970  30.112 2.265 72.6 16.8 0.99 540.56 1780.11  20170817  668440   36   8524874  
+OBS:   57983.975  z  -1   9.2664e+03   4.4539e+01  12288   0.980  30.920 2.176 95.1 35.2 0.99 560.82 1775.23  20170818  668960   36   8801435  
+OBS:   57983.975  i  -1   7.6639e+03   3.1415e+01  12800   0.970  31.160 2.042 80.0 29.6 1.02 572.49 1793.35  20170818  668961   36   10275436  
+
+# END 

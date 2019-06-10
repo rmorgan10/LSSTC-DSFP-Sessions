@@ -1,0 +1,64 @@
+SURVEY:    DES 
+SNID:      304924
+SNTYPE:      0     #  
+FILTERS:   griz 
+PIXSIZE:   0.27    # arcsec 
+NXPIX:     2048  
+NYPIX:     4096  
+FAKE:      0 
+RA:        193.612134  deg
+DECL:      -14.702304  deg
+MWEBV:     0  # WARNING: see OPT_MWEBV in SNANA manual 
+MWEBV_ERR: 0  
+REDSHIFT_HELIO:  -9.0000  +-  -9.0000    #  
+REDSHIFT_FINAL:  -9.0000  +-  -9.0000    # CMB
+
+HOSTGAL_OBJID:   -888 
+HOSTGAL_PHOTOZ:  -9.0000 +-  -9.0000
+HOSTGAL_SPECZ:   -9.0000 +-  -9.0000
+HOSTGAL_SNSEP:   -9.00    # arcsec
+HOSTGAL_MAG:     888.00 888.00 888.00 888.00    # Aper_4 
+
+# For GW170817, HOSTGAL_SB is from 1st GALFLUX epoch in SNOBS table
+HOSTGAL_SB_FLUXCAL: -999.00 -999.00 -37780.54 -37780.54    # griz FLUXCAL/asec^2 
+
+PRIVATE(DES_snid):            304924 
+PRIVATE(DES_cand_type):         0   (OK                  )
+PRIVATE(DES_transient_status):  0  
+PRIVATE(DES_ccdnum):            55  # first CCDNUM in query 
+PRIVATE(DES_numepochs):         0  # read from SNCAND 
+PRIVATE(DES_numepochs_ml):      0  # read from SNCAND 
+PRIVATE(DES_numepochs_ml_Y0):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y1):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y2):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y3):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y4):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y5):      0  # computed 
+PRIVATE(DES_numepochs_ml_Y6):      0  # computed 
+PRIVATE(DES_mjd_trigger):       0.000 # computed
+PRIVATE(DES_mjd_latest_ml):     0.000 # computed 
+PRIVATE(DES_latest_nite_ml):    0   # read from SNCAND
+PRIVATE(DES_nobs_offccd):       0  # computed 
+PRIVATE(DES_nobs_photerr):      0  # (Nobs with PHOTLAG & 1016) 
+PRIVATE(DES_hostgal_dlr):       -9.00   
+PRIVATE(DES_hostgal_gradient_g):  -888.00 
+PRIVATE(DES_hostgal_gradient_r):  -888.00 
+PRIVATE(DES_hostgal_gradient_i):  -888.00 
+PRIVATE(DES_hostgal_gradient_z):  -888.00 
+
+
+# ------------------ 
+NOBS: 6 
+NVAR: 18 
+VARLIST: MJD  FLT  FIELD FLUXCAL  FLUXCALERR PHOTFLAG PHOTPROB ZPFLUX PSF SKYSIG SKYSIG_T GAIN XPIX YPIX  NITE EXPNUM CCDNUM OBJID  
+
+# Begin Y503 obs 
+
+#OBS:   57982.974  i  GW  -8.7010e+02   9.9556e+01    1   -9  30.390 2.290 61.2 47.6 0.98 399.67 2890.18  20170817  668397   55   0  
+#OBS:   57982.975  z  GW  -1.0457e+03   1.1294e+02    1   -9  30.117 2.167 66.1 46.8 1.00 403.79 2881.73  20170817  668398   55   0  
+OBS:   57982.980  i  GW   1.7159e+03   9.1737e+01  12288   0.535  30.391 2.612 48.0 49.1 0.98 1784.43 759.29  20170817  668405   10   10400282  
+OBS:   57982.980  z  GW   1.4031e+03   1.1599e+02  4096   0.324  30.134 2.528 62.6 45.9 0.97 1797.28 754.22  20170817  668406   10   8587963  
+OBS:   57982.982  i  GW   2.1061e+02   1.0625e+02  4097   0.242  30.407 3.183 47.3 43.8 0.95 40.56 198.90  20170817  668409   13   8702368  
+OBS:   57982.983  z  GW  -9.0542e+02   1.1925e+02    1   -9  30.126 2.774 63.0 48.1 0.96 41.06 206.14  20170817  668410   13   0  
+
+# END 
